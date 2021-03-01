@@ -1,0 +1,15 @@
+{
+	"files": [],
+	"references": [
+		{
+			"path": "./app"
+		},
+		{
+			"path": "./cot-render"
+		}
+	],
+	"exclude": [
+		"node_modules",
+		".vscode-test"
+	]
+}

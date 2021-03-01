@@ -1,0 +1,50 @@
+{
+	"name": "cot-vs-ext",
+	"displayName": "cot-vs-ext",
+	"description": "cot vscode ext",
+	"version": "0.0.1",
+	"engines": {
+		"vscode": "^1.53.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onCommand:cot-vs-ext.test1",
+		"onCommand:cot-vs-ext.test2"
+	],
+	"main": "./out/app/extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "cot-vs-ext.test1",
+				"title": "test1"
+			},
+			{
+				"command": "cot-vs-ext.test2",
+				"title": "test2"
+			}
+		]
+	},
+	"scripts": {
+		"vscode:prepublish": "yarn run compile",
+		"compile": "tsc -b",
+		"lint": "eslint . --ext ts",
+		"watch": "tsc -b -w",
+		"pretest": "yarn run compile && yarn run lint",
+		"test": "node ./out/app/test/runTest.js"
+	},
+	"devDependencies": {
+		"@types/vscode": "^1.53.0",
+		"@types/glob": "^7.1.1",
+		"@types/mocha": "^7.0.2",
+		"@types/node": "^13.11.0",
+		"eslint": "^6.8.0",
+		"@typescript-eslint/parser": "^2.30.0",
+		"@typescript-eslint/eslint-plugin": "^2.30.0",
+		"glob": "^7.1.6",
+		"mocha": "^7.1.2",
+		"typescript": "^3.8.3",
+		"vscode-test": "^1.3.0"
+	}
+}
